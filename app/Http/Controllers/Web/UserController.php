@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Model\user;
+use App\Providers\SmsServiceProvider;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
@@ -24,4 +25,9 @@ class UserController extends Controller
         ]);
     }
 
+    public function sms()
+    {
+        $sms = new SmsServiceProvider();
+        $sms->sms();
+    }
 }

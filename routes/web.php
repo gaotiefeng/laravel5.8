@@ -15,5 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/user/index', 'web\UserController@index');
+Route::get('/user/sms', 'web\UserController@sms');
 Route::get('/mailer/emailSend', 'web\MailerController@emailSend');
 
