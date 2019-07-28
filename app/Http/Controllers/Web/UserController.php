@@ -18,6 +18,7 @@ class UserController extends Controller
         $insertUser->key=Str::random(6);
         $insertUser->name=Str::random(8);
         $insertUser->mobile=Str::random(11);
+        $insertUser->save();
         $users = DB::table('user')->paginate(2);
 
         return view('user.user', [
